@@ -100,7 +100,7 @@ def main():
         vpcid = ''
     except Exception, e:
         try:
-            instance_id = requests.get('http://169.254.169.254/latest/meta-data/instance-id')
+            instanceid = requests.get('http://169.254.169.254/latest/meta-data/instance-id')
         except Exception, e:
             logging.error('Failed to find either INSTANCEID variable or open instance metadata connection ' +
                           'to endpoint http://169.254.169.254/.', exc_info=True)
